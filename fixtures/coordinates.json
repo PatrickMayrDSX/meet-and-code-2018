@@ -1,0 +1,24 @@
+{
+  "coordinates": [
+    {
+      "id": 1,
+      "latitude": 123,
+      "longitude": 123
+    },
+    {
+      "id": 2,
+      "latitude": 123,
+      "longitude": 123
+    },
+    {
+      "id": 3,
+      "latitude": 123,
+      "longitude": 123
+    },
+    {
+      "id": 4,
+      "latitude": 123,
+      "longitude": 123
+    }
+  ]
+}
