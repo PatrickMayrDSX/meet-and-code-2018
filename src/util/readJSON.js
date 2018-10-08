@@ -1,8 +1,7 @@
 import fs from 'fs';
 
-const _readJSON = (filename) => {
-  const file = fs.readFileSync(filename, 'utf8');
-  return JSON.parse(file);
-};
+import readFile from './readFile';
+
+const _readJSON = (filename) => JSON.parse(readFile(filename));
 
 export default _readJSON;

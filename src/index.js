@@ -4,7 +4,9 @@ import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 
-import coordinatesFn from './coordinates/';
+import coordinatesFn from './endpoints/coordinates/';
+import routesFn from './endpoints/routes/';
+
 import { logWarning } from './util/LoggingHelper';
 
 const app = express();
@@ -14,11 +16,15 @@ app.use(helmet());
 const _addEndpoint = (route, returnDataFn) => {
   console.log(`(ℹ️ ) adding route for "${route}"`);
   app.get(`/${route}/`, (req, res) => {
-    res.send(returnDataFn(req.query));
+    const returnData = returnDataFn(req.query);
+    res
+      .type(returnData.type || 'html')
+      .send(returnData.data);
   });
 };
 
 _addEndpoint('coordinates', coordinatesFn);
+_addEndpoint('routes/avatars', routesFn);
 
 // -- error handler!
 app.use(function(error, req, res, next) {
