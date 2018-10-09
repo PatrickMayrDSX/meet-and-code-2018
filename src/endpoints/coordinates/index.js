@@ -3,7 +3,7 @@ import { get, isFinite, toNumber, chunk } from 'lodash';
 import readJSON from '../../util/readJSON';
 import CustomError from '../../util/CustomError';
 
-const PAGE_SIZE = 14;
+const PAGE_SIZE = 15;
 
 const _coordinatesFn = (queryParameter) => {
   const coordinatesJSON = readJSON(`${__dirname}/../../../fixtures/coordinates.json`);

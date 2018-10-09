@@ -21,4 +21,3 @@ export const logWarning = (message) => {
 export const logError = (message) => {
   _log(console.error, message);
 };
-
