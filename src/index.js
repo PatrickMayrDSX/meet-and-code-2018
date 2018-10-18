@@ -41,7 +41,8 @@ app.use(function(error, req, res, next) {
     });
 });
 
-app.listen(80, () => {
+const port = process.env.PORT || 3001;
+app.listen(port , () => {
   console.log('(✅ ) init done!');
-  console.log('app listening on port 3001!');
+  console.log(`app listening on port ${port}!`);
 });
