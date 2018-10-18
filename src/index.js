@@ -41,7 +41,7 @@ app.use(function(error, req, res, next) {
     });
 });
 
-app.listen(3001, () => {
+app.listen(80, () => {
   console.log('(✅ ) init done!');
   console.log('app listening on port 3001!');
 });
