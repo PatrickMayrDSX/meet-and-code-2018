@@ -1,5 +1,7 @@
 import { get, isFinite, toNumber, chunk } from 'lodash';
 
+import { DOMAIN } from '../../constants/domain';
+
 import readJSON from '../../util/readJSON';
 import CustomError from '../../util/CustomError';
 
@@ -18,7 +20,7 @@ const _coordinatesFn = (queryParameter) => {
 
   const links = {};
   if (pageNumber < pages.length) {
-    links.next = `http://10.1.9.70:3001/coordinates?page=${pageNumber + 1}`;
+    links.next = `${DOMAIN}/coordinates?page=${pageNumber + 1}`;
   }
 
   return {
