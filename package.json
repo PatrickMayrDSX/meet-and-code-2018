@@ -16,9 +16,7 @@
     "lodash": "^4.17.5",
     "node-cron": "^1.2.1",
     "superagent": "^3.8.2",
-    "superagent-sync": "^0.2.1"
-  },
-  "devDependencies": {
+    "superagent-sync": "^0.2.1",
     "babel-cli": "^6.18.0",
     "babel-eslint": "^7.0.0",
     "babel-polyfill": "^6.26.0",
