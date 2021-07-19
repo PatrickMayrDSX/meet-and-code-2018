@@ -10,7 +10,7 @@ const _routesFN = (queryParameter, redirectFn) => {
   }
 
   return {
-    newUrl: `https://api.adorable.io/avatars/100/${rank}.png`,
+    newUrl: `https://i.pravatar.cc/100?img=${rank}`,
   };
 }
 
